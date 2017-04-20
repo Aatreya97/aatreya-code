@@ -1,0 +1,10 @@
+%% Part 1 - Question 2
+% Create array of image names
+testFiles = dir('test/*.jpg');
+% Loop through all images
+i = 1; 
+for i = 1:length(testFiles) 
+    [temp_score,temp_category] = classifier('.\test\',testFiles(i).name);
+    classifierInfo(i) = struct('Category',temp_category, ...
+        'Score',temp_score); 
+end                                                                                      
