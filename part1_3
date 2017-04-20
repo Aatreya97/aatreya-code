@@ -1,0 +1,8 @@
+%% Part 1 - Question 3
+% Create array of image names
+veggie_testFiles = dir('vegetable_test/*.jpg');
+% Loop through all images
+i = 1;
+for i = 1:length(veggie_testFiles) 
+    classifier('.\vegetable_test\',veggie_testFiles(i).name)
+end                                                                    
